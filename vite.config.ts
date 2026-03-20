@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
-  base: '/mmood-intitutional-site/', // Define a base URL para o GitHub Pages
+  base: '/mmood-intitutional-site/',
   server: {
     open: true,
     port: 3001

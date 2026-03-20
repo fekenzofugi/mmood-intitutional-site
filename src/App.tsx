@@ -3,7 +3,7 @@ import HomeLayout from './layouts/HomeLayout'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/mmood-intitutional-site/',
     element: <HomeLayout />
   }
 ])
