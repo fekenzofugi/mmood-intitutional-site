@@ -22,7 +22,7 @@ const About = () => {
                             conectando grandes marcas ao consumidor final com eficiência e agilidade pelo Mercado Livre.
                         </p>
                         <p>
-                            Somos parceiros oficiais de marcas líderes como <strong>Dac, Grupo Dass, New Balance, ACP, Joma e Umbro</strong>. 
+                            Somos parceiros oficiais de marcas líderes como <strong>Dac, ACP, Grupo Dass (New Balance, Fila, Umbro) e Grupo Vulcabras</strong>. 
                             Nosso catálogo abrange desde alta performance em <strong>artigos esportivos</strong> até a funcionalidade completa de <strong>materiais escolares e de escritório</strong>.
                         </p>
                         <p className="highlight">
