@@ -3,11 +3,11 @@ const links = [
         text: "Sobre nós",
     },
     {
-        text: "Produtos",
+        text: "Marcas Parceiras",
 
     },
     {
-        text: "Contato",
+        text: "Canais de Venda",
     },
 
 ];

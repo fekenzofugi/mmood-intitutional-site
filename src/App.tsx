@@ -1,21 +1,14 @@
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import HomeLayout from './layouts/HomeLayout'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <HomeLayout />
-  }
-])
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomeLayout from './layouts/HomeLayout';
 
 function App() {
-
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  )
+    <BrowserRouter basename="/mmood-intitutional-site/">
+      <Routes>
+        <Route path="/" element={<HomeLayout />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

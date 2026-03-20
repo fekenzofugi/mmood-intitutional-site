@@ -12,24 +12,23 @@ const slidesData: SlideItem[] = [
     {
         id: 1,
         image: 'https://img.freepik.com/fotos-gratis/armazenamento-e-inventario-de-armazem_23-2152001549.jpg?semt=ais_hybrid&w=1600&q=80',
-        alt: 'Logística Inteligente MarketMood',
+        alt: 'MarketMood - Qualidade e Estilo',
     },
     {
         id: 2,
-        image: "https://img.freepik.com/fotos-premium/estoque-de-mercadorias-de-armazem-de-grande-estoque-para-fundo-de-banner-de-remessa-logistica-criado-com-tecnologia-de-ia-generativa_965119-2291.jpg",
-        alt: 'Gestão de Estoque Profissional',
+        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070&auto=format&fit=crop",
+        alt: 'Nova Coleção MarketMood',
     },
     {
         id: 3,
-        image: "https://clearpromocoes.com.br/wp-content/uploads/2020/10/clear-promocoes-estoque-supermercado.jpg",
-        alt: 'Infraestrutura de Armazenamento',
+        image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070&auto=format&fit=crop",
+        alt: 'Experiência de Compra MarketMood',
     },
 ];
 
 const PrimaryBanner: React.FC = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Lógica para trocar o slide automaticamente a cada 7 segundos
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev === slidesData.length - 1 ? 0 : prev + 1));
@@ -39,9 +38,7 @@ const PrimaryBanner: React.FC = () => {
 
     return (
         <Wrapper>
-            {/* NOVO CONTAINER: Aplica o zoom em tudo o que está dentro */}
             <ZoomContainer>
-                {/* Camada de Imagens do Carrossel - Agora sem animação individual */}
                 {slidesData.map((slide, index) => (
                     <SlidePane key={slide.id} active={index === currentSlide}>
                         <div className="overlay" />
@@ -54,15 +51,22 @@ const PrimaryBanner: React.FC = () => {
                 ))}
             </ZoomContainer>
 
-            {/* Conteúdo Fixo Central */}
             <Content>
-                <h1>MarketMood</h1>
+                <h1>Market Mood</h1>
                 <div className="title-underline"></div>
-                <p>Soluções inteligentes para a gestão do seu inventário e logística de ponta a ponta.</p>
-                <button className="btn">Conheça Nossos Produtos</button>
+                <p>Curadoria exclusiva e as melhores ofertas em nossa loja oficial no Mercado Livre.</p>
+                
+                {/* BOTÃO ATUALIZADO COM O LINK */}
+                <a 
+                    href="https://www.mercadolivre.com.br/pagina/marketmood?item_id=MLB4128716608&category_id=MLB270875&seller_id=625549907&client=recoview-selleritems&recos_listing=true#origin=upp&component=sellerData&typeSeller=eshop" 
+                    className="btn"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    Ver Loja Oficial
+                </a>
             </Content>
 
-            {/* Indicadores de Navegação (Pills) */}
             <Pagination>
                 {slidesData.map((_, index) => (
                     <Bullet 
@@ -78,20 +82,17 @@ const PrimaryBanner: React.FC = () => {
 
 // --- ESTILOS ---
 
-// Animação de Zoom Contínuo e Lento
 const continuousZoom = keyframes`
   from { transform: scale(1); }
-  to { transform: scale(1.15); } /* Aumentei um pouco a escala final */
+  to { transform: scale(1.1); }
 `;
 
 const Wrapper = styled.section`
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     position: relative;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
-    background: #000; /* Evita flash branco entre transições */
+    background: #000;
 `;
 
 const ZoomContainer = styled.div`
@@ -100,39 +101,30 @@ const ZoomContainer = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    /* Aplica a animação aqui, linear e infinita para suavidade máxima */
     animation: ${continuousZoom} 20s linear infinite alternate; 
-    /* 'alternate' faz o zoom ir e voltar, evitando reset visual brusco no fim */
 `;
 
 const SlidePane = styled.div<{ active: boolean }>`
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* O controle de visibilidade permanece aqui */
+    inset: 0;
     opacity: ${props => (props.active ? 1 : 0)};
     z-index: ${props => (props.active ? 1 : 0)};
-    transition: opacity 1.5s ease-in-out; /* Efeito Fade do D'Heaven */
+    transition: opacity 1.5s ease-in-out;
 
     .overlay {
         position: absolute;
         inset: 0;
         z-index: 2;
-        /* Overlay elegante e mais claro */
         background-image: linear-gradient(
-            rgba(16, 42, 67, 0.45), 
-            rgba(16, 42, 67, 0.25)
+            rgba(16, 42, 67, 0.4), 
+            rgba(16, 42, 67, 0.2)
         );
     }
 
-    /* Estilo da imagem dentro do pane, sem animação própria */
     .carousel-image {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
     }
 `;
 
@@ -151,40 +143,41 @@ const Content = styled.div`
         font-size: clamp(2.5rem, 8vw, 5rem);
         color: #fff;
         text-transform: uppercase;
-        letter-spacing: 3px;
-        text-shadow: 0px 4px 20px rgba(0, 0, 0, 0.6);
+        letter-spacing: 4px;
         margin-bottom: 0.5rem;
+        font-weight: 800;
     }
 
     .title-underline {
-        margin: 0 auto 2rem;
-        width: 100px;
-        height: 5px;
+        margin: 0 auto 2.5rem;
+        width: 80px;
+        height: 6px;
         background: #f59e0b;
-        border-radius: 2px;
     }
 
     p {
-        font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+        font-size: clamp(1rem, 2vw, 1.2rem);
         color: #fff;
-        max-width: 750px;
+        max-width: 600px;
         margin: 0 auto 3rem;
         font-weight: 500;
         line-height: 1.6;
-        text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
     }
 
+    /* ESTILO DO LINK COM APARÊNCIA DE BOTÃO */
     .btn {
-        padding: 1.2rem 3rem;
-        font-size: 1rem;
+        display: inline-block;
+        text-decoration: none;
+        padding: 1.2rem 3.5rem;
+        font-size: 0.9rem;
         font-weight: 700;
         text-transform: uppercase;
+        letter-spacing: 2px;
         background: #f59e0b;
         color: #102a43;
-        border: none;
         border-radius: 4px;
-        cursor: pointer;
-        transition: 0.3s;
+        transition: 0.3s ease;
+        
         &:hover {
             background: #fff;
             transform: translateY(-3px);
@@ -204,11 +197,11 @@ const Pagination = styled.div`
 `;
 
 const Bullet = styled.button<{ active: boolean }>`
-    width: ${props => (props.active ? '30px' : '10px')};
+    width: ${props => (props.active ? '35px' : '10px')};
     height: 10px;
     border-radius: 5px;
     border: none;
-    background: ${props => (props.active ? '#f59e0b' : 'rgba(255,255,255,0.5)')};
+    background: ${props => (props.active ? '#f59e0b' : 'rgba(255,255,255,0.4)')};
     cursor: pointer;
     transition: all 0.4s ease;
 `;
