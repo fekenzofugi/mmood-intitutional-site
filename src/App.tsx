@@ -5,7 +5,7 @@ function App() {
   return (
     <BrowserRouter basename="/mmood-intitutional-site/">
       <Routes>
-        <Route path="/" element={<HomeLayout />} />
+        <Route path="" element={<HomeLayout />} />
       </Routes>
     </BrowserRouter>
   );
