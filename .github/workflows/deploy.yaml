@@ -23,7 +23,7 @@ jobs:
 
       # Install Dependencies 
       - name: Install Dependencies
-        uses: yarn
+        uses: yarn install
 
       # Build the project 
       - name: Build the project
