@@ -13,11 +13,11 @@ const Footer = () => {
           </Description>
         </BrandSection>
 
-        {/* Coluna 2: Redes e Canais (Troca solicitada) */}
+        {/* Coluna 2: Redes e Canais */}
         <ActionSection>
           <h4>Conecte-se</h4>
           <div className="links-group">
-            <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/marketmood.br/" target="_blank" rel="noreferrer">
               <FaInstagram /> Instagram
             </a>
             <a href="https://www.mercadolivre.com.br/pagina/marketmood?item_id=MLB4128716608&category_id=MLB270875&seller_id=625549907&client=recoview-selleritems&recos_listing=true#origin=upp&component=sellerData&typeSeller=eshop" target="_blank" rel="noreferrer">
@@ -29,13 +29,16 @@ const Footer = () => {
         {/* Coluna 3: Institucional Simples */}
         <LinksSection>
           <h4>Menu</h4>
-          <a href="#">Sobre Nós</a>
-          <a href="#">Fale Conosco</a>
+          <a href="#sobre-nós">Sobre Nós</a>
+          <a href="mailto:contato@marketmood.com.br">Fale Conosco</a>
         </LinksSection>
       </FooterContent>
 
       <CopyrightBar>
-        <p>© {new Date().getFullYear()} MARKETMOOD. Todos os direitos reservados.</p>
+        <div className="container">
+          <p>© {new Date().getFullYear()} MARKETMOOD. Todos os direitos reservados.</p>
+          <p className="cnpj">CNPJ: 38.037.290/0001-10</p>
+        </div>
       </CopyrightBar>
     </Wrapper>
   );
@@ -47,7 +50,7 @@ const Wrapper = styled.footer`
   width: 100%;
   background: var(--grey-50);
   color: var(--grey-800);
-  padding: 5rem 2rem 1.5rem 2rem;
+  padding: 5rem 2rem 2rem 2rem;
   border-top: 1px solid var(--grey-200);
 `;
 
@@ -84,10 +87,6 @@ const Description = styled.p`
   font-size: 1rem;
   line-height: 1.6;
   max-width: 400px;
-
-  strong {
-    color: var(--primary-500);
-  }
 
   @media (max-width: 992px) {
     max-width: 100%;
@@ -169,11 +168,24 @@ const CopyrightBar = styled.div`
   border-top: 1px solid var(--grey-200);
   text-align: center;
   
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
   p {
     font-size: 0.8rem;
     color: var(--grey-500);
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin: 0;
+  }
+
+  .cnpj {
+    font-weight: 600;
+    color: var(--grey-400);
+    font-size: 0.75rem;
   }
 `;
 
