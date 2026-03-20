@@ -14,7 +14,7 @@ const partners: Partner[] = [
   { name: 'ACP', logo: 'https://static.wixstatic.com/media/d06998_f68892c9671f4f83b5eb6520151c025e~mv2.png/v1/fill/w_187,h_77,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Logo-ACP.png'},
   { name: 'Dass', logo: 'https://sportsjob.com.br/wp-content/uploads/wp-jobhunt-users/grupo-dass.png'},
   { name: 'Leonora', logo: 'https://www.grupoleonora.com.br/wp-content/uploads/2025/08/logo-leonora.png'},
-  { name: 'Olympikus', logo: 'https://fekenzofugi.github.io/mmood-intitutional-site/'},
+  { name: 'Olympikus', logo: 'https://uppo-prod-v2.imgix.net/vendors/mltutuEMHsKJu3hFO3gspRrYu01uWCTQ6Mo6ajW2.png'},
   { name: 'Vulcabras', logo: 'https://cdn-sites-assets.mziq.com/wp-content/themes/mziq_vulcabras_ri/img/logo-new.png'},
 ];
 
