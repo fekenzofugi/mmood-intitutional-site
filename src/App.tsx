@@ -3,7 +3,7 @@ import HomeLayout from './layouts/HomeLayout';
 
 function App() {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter>
       <Routes>
         <Route path="/mmood-intitutional-site" element={<HomeLayout />} />
       </Routes>
