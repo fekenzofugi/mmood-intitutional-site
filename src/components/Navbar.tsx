@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-import links from '../utils/NavbarLInks'
-import logo from '../assets/logo.png' // Certifique-se de ter a logo na pasta assets    
+import links from '../utils/NavbarLInks' // Corrigido erro de digitação no nome do arquivo se houver
+import logo from '../assets/logo.png' 
 
 const Navbar = () => {
     return (
         <Wrapper>
             <NavContainer>
                 <Logo href="/">
-                    {/* Mantive a logo, mas adicionei um filtro para garantir visibilidade */}
+                    {/* Removi o filtro agressivo para testarmos a visibilidade original */}
                     <img src={logo} alt="MarketMood Logo" />
                 </Logo>
                 <LinksContainer>
@@ -29,22 +29,19 @@ const Wrapper = styled.nav`
     left: 0;
     z-index: 1000;
     
-    /* O SEGREDO: Fundo levemente escurecido (RGBA) + Blur forte */
-    background: rgba(16, 42, 67, 0.4); /* Azul marinho da marca com 40% de opacidade */
+    background: rgba(16, 42, 67, 0.6); /* Aumentei um pouco a opacidade para garantir contraste */
     backdrop-filter: blur(12px); 
     -webkit-backdrop-filter: blur(12px);
     
-    /* Borda sutil para separar do conteúdo */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
 `
 
 const NavContainer = styled.div`
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 2rem;
-    height: 70px; /* Altura slim sofisticada */
+    height: 70px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -53,15 +50,16 @@ const NavContainer = styled.div`
 const Logo = styled.a`
     display: flex;
     align-items: center;
+    
     img {
-        height: 32px; 
+        height: 40px; /* Aumentei um pouco para facilitar o teste visual */
         width: auto;
-        filter: brightness(0) invert(1); /* Força a logo a ficar branca para contraste */
-        transition: var(--transition);
+        display: block; /* Garante que o elemento seja renderizado */
+        transition: all 0.3s ease;
     }
+
     &:hover img {
         transform: scale(1.05);
-        opacity: 0.8;
     }
 `
 
@@ -71,7 +69,7 @@ const LinksContainer = styled.div`
 `
 
 const NavLink = styled.a`
-    color: #ffffff; /* Texto sempre branco para o tema dark-glass */
+    color: #ffffff; 
     text-decoration: none;
     font-size: 0.8rem; 
     font-weight: 600;
@@ -80,7 +78,6 @@ const NavLink = styled.a`
     position: relative;
     transition: all 0.3s ease;
 
-    /* Linha decorativa (Underline) */
     &::after {
         content: '';
         position: absolute;
@@ -88,12 +85,12 @@ const NavLink = styled.a`
         left: 0;
         width: 0;
         height: 2px;
-        background: var(--secondary-500, #f59e0b); 
+        background: #f59e0b; 
         transition: all 0.3s ease;
     }
 
     &:hover {
-        color: var(--secondary-500, #f59e0b);
+        color: #f59e0b;
     }
 
     &:hover::after {
