@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import links from '../utils/NavbarLInks';
-import logo from '../assets/logo2.png';
+// import logo from '../assets/logo2.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -81,16 +81,16 @@ const NavContainer = styled.div`
     position: relative; /* Para garantir z-index correto dos filhos */
 `;
 
-const Logo = styled.a`
-    z-index: 1100; /* Sempre visível e clicável */
-    display: flex;
-    align-items: center;
+// const Logo = styled.a`
+//     z-index: 1100; /* Sempre visível e clicável */
+//     display: flex;
+//     align-items: center;
     
-    img {
-        height: 35px;
-        transition: transform 0.3s ease;
-    }
-`;
+//     img {
+//         height: 35px;
+//         transition: transform 0.3s ease;
+//     }
+// `;
 
 const LogoSpan = styled.h2`
   font-size: 1.8rem;
