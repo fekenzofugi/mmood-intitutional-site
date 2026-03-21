@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import links from '../utils/NavbarLInks';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo2.png';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +20,10 @@ const Navbar = () => {
     return (
         <Wrapper>
             <NavContainer>
-                <Logo href="/">
+                {/* <Logo href="/">
                     <img src={logo} alt="MarketMood Logo" />
-                </Logo>
+                </Logo> */}
+                <LogoSpan>MARKET<span>MOOD</span></LogoSpan>
 
                 {/* Botão Hambúrguer - Mantém z-index alto */}
                 <MenuButton onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}>
@@ -89,6 +90,15 @@ const Logo = styled.a`
         height: 35px;
         transition: transform 0.3s ease;
     }
+`;
+
+const LogoSpan = styled.h2`
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--secondary-100);
+  margin: 0;
+  span { color: var(--secondary-500); }
 `;
 
 const MenuButton = styled.button<{ isOpen: boolean }>`
