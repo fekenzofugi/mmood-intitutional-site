@@ -11,7 +11,7 @@ const channel = {
 const CanaisDeVenda: React.FC = () => {
   return (
     <Section>
-      <header>
+      <header id='canais de venda'>
         <h5>Canais de Venda</h5>
         <h2>Onde Estamos</h2>
         <div className="title-underline"></div>

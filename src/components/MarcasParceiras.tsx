@@ -24,7 +24,7 @@ const PartnerTicker: React.FC = () => {
 
   return (
     <Section>
-      <header>
+      <header id='marcas parceiras'>
         <h2>Marcas Parceiras</h2>
         <div className="underline"></div>
         <p>
