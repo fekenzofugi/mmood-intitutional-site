@@ -61,7 +61,7 @@ const Section = styled.section`
     }
 
     h2 {
-      font-size: 2.8rem;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
       color: var(--primary-500);
       text-transform: uppercase;
       letter-spacing: 3px;

@@ -67,7 +67,7 @@ const Section = styled.section`
     padding: 0 2rem;
 
     h2 {
-      font-size: 2.8rem;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
       color: #102a43;
       text-transform: uppercase;
       letter-spacing: 3px;
