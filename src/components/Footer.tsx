@@ -29,8 +29,8 @@ const Footer = () => {
         {/* Coluna 3: Institucional Simples */}
         <LinksSection>
           <h4>Menu</h4>
-          <a href="#sobre-nós">Sobre Nós</a>
-          <a href="mailto:contato@marketmood.com.br">Fale Conosco</a>
+          <a href="#sobre nós">Sobre Nós</a>
+          <a href="https://wa.me/5511941824823?text=Bem%20vindo%20a%Market%20Mood">Fale Conosco</a>
         </LinksSection>
       </FooterContent>
 

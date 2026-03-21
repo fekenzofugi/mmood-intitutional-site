@@ -4,6 +4,8 @@ import PrimaryBanner from "../components/PrimaryBanner"
 import About from "../components/About"
 import MarcasParceiras from "../components/MarcasParceiras"
 import CanaisDeVenda from "../components/CanaisDeVenda"
+import PerguntasFrequentes from "../components/PerguntasFrequentes"
+import Whatsapp from "../components/Whatsapp"
 import Footer from "../components/Footer"
 
 const HomeLayout = () => {
@@ -14,6 +16,8 @@ const HomeLayout = () => {
         <About />
         <MarcasParceiras />
         <CanaisDeVenda />
+        <PerguntasFrequentes />
+        <Whatsapp />
         <Footer />
     </Wrapper>
   )
