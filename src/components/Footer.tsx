@@ -17,7 +17,7 @@ const Footer = () => {
         <ActionSection>
           <h4>Conecte-se</h4>
           <div className="links-group">
-            <a href="https://www.instagram.com/marketmood.br/" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/marketmoodbr/" target="_blank" rel="noreferrer">
               <FaInstagram /> Instagram
             </a>
             <a href="https://www.mercadolivre.com.br/pagina/marketmood?item_id=MLB4128716608&category_id=MLB270875&seller_id=625549907&client=recoview-selleritems&recos_listing=true#origin=upp&component=sellerData&typeSeller=eshop" target="_blank" rel="noreferrer">
